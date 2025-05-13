@@ -22,18 +22,21 @@
       
       <aside class="filter-sidebar">
         <div class="filter-header">
-          <h4>필터</h4>
-          <button class="reset-btn">초기화</button>
+          <h4 class="filter">필터</h4>
+          <div class="reset">
+            <img src="{% static 'assets/reset.svg' %}" alt="reset">
+            <p>초기화</p>
+          </div>
         </div>
         <div class="category-filter">
           <p class="filter-title">카테고리</p>
-          <i class="fas fa-chevron-up arrow-icon"></i>
+          <img src="{% static 'assets/up.svg' %}" alt="reset">
         </div>
         <div class="category-detail">
           <ul>
-            <li><label><input type="checkbox" /> 스킨케어·메이크업 <span>68</span></label></li>
-            <li><label><input type="checkbox" /> 럭셔리뷰티 <span>24</span></label></li>
-            <li><label><input type="checkbox" /> 간식·과자·떡 <span>28</span></label></li>
+            <li><label><input type="checkbox" /> 스킨케어·메이크업 <span class="number">68</span></label></li>
+            <li><label><input type="checkbox" /> 럭셔리뷰티 <span class="number">24</span></label></li>
+            <li><label><input type="checkbox" /> 간식·과자·떡 <span class="number">28</span></label></li>
           </ul>
         </div>
       </aside>
@@ -75,8 +78,10 @@
             <p class="product-desc">{{ product.description }}</p>
             <div class="price-info">
               <del>{{ product.origin_price }}원</del>
-              <span class="discount">{{ product.discount_rate }}%</span>
-              <strong class="final">{{ product.discount_price }}원</strong>
+              <div class="real-price">
+                <span class="discount">{{ product.discount_rate }}%</span>
+                <p class="final">{{ product.discount_price }}원</p>
+              </div>
             </div>
           </div>
         </div>
