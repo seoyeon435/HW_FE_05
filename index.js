@@ -8,3 +8,6 @@ customTag.addClassName('myClass1');
 customTag.addClassName('myClass2');
 customTag.removeClassName('myClass2');
 customTag.render('container');
+window.addEventListener('DOMContentLoaded', () => {
+    customTag.render('container');
+});
