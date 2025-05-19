@@ -5,19 +5,76 @@
   href="{% static 'css/main/product_detail_page.css'%}"
 />
 
-<!-- 코드 작성시, 아래 부분(endblock 이전)은 전체 삭제하고 작성하세요 -->
 
-<!----------------tip!---------------->
-<!-- 상품 데이터베이스는 프로젝트에 넣어뒀어요 -->
-<!-- 아래와 같은 형식으로 사용하세요 -->
+<div class="container">
+  <div class="wrapper">
+    <!-- 왼쪽: 이미지 영역 -->
+    <div class="product-image">
+      <img src="{% static 'assets/fruit.png' %}" alt="{{ product.name }}">
+    </div>
 
-<!-- 데이터 사용 예시 -->
-<img src="{{product.image_url}}" style="width: 100px" />
-<p>{{product.name}}</p>
-<p>{{product.discount_rate}}%</p>
-<p>{{product.discount_price}} 원</p>
-<p>{{product.notice}}</p>
-<!-- 데이터 사용 예시 -->
+    <!-- 오른쪽: 상품 정보 영역 -->
+    <div class="product">
+      <div class="section1">
+          <p class="delivery">샛별배송</p>
+          <h2 class="product-name">{{product.name}}</h2>
+          <div class="price">
+              <p class="discount-rate">{{product.discount_rate}}%</p>
+              <p class="discount-price">{{product.discount_price}}원</p>
+          </div>
+
+          <div class="notice-box">
+            <p class="notice-title">안내 사항</p>
+            <p class="notice-desc">{{product.notice}}</p>
+          </div>
+
+          <div class="option">
+            <p class="option-title">상품 선택</p>
+            <div class="option-box">
+                <p class="option-name">[선물세트] 유통섭취 사과세트 3.6kg (12입)</p>
+                <div class="quantity">
+                  <p class="minus">-</p>
+                  <span class="option-num">2</span>
+                  <p class="plus">+</p>
+                </div>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="section2">
+
+        <div class="price-box">
+          <div class="price-title">총 상품 금액:</div>
+          <div class="total-price">158,000원</div>
+        </div>
+
+
+        <button class="login-btn">로그인</button>
+
+    </div>
+  </div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="{% static 'js/main/product_detail_page.js'%}"></script>
 {% endblock %}

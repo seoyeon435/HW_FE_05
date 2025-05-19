@@ -321,3 +321,30 @@
     color: #5f0080;   
     font-weight: 700;
     }
+
+    /* 카테고리 박스 */
+    .selected {
+        display:none;
+        padding: 20px 16px 18px 16px;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
+        border: 1px solid var(--stroke-stroke-2, #E2E2E2);
+    }
+
+    .category-tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px; 
+    }
+
+    .category-tag span {
+        color: var(--point-main, #5E0080);
+        font-family: Pretendard;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: -1px;
+    }

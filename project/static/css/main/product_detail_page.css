@@ -1,1 +1,240 @@
 /* product detail page - CSS */
+
+.container {
+    display: flex;
+    padding-top: 50px;
+    /* padding-bottom: 100px; */
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    align-self: stretch;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.product-image {
+    width: 430px;
+    height: 550px;
+}
+
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.delivery {
+    color: var(--font-font2, #999);
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 133.333% */
+
+}
+
+.product-name {
+    display: flex;
+    padding-top: 8px;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--font-font-1, #333);
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -1px;
+}
+
+.price {
+    display: flex;
+    padding: 20px 0px;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.discount-rate {
+    color: var(--point-red, #FA622F);
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 114.286% */
+    letter-spacing: -1px;
+}
+
+.discount-price {
+    color: var(--font-font-1, #333);
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 114.286% */
+    letter-spacing: -1px;
+}
+
+.notice-box, 
+.option {
+    display: flex;
+    padding: 20px 0px;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+
+.notice-title,
+.option-title {
+    width: 128px;
+    color: var(--font-font2, #999);
+    /* B2-bold */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -1px;
+    }
+
+.notice-desc {
+    color: var(--font-font-1, #333);
+    /* B2 */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -1px;
+    }
+
+
+.option-box {
+    display: flex;
+    padding: 10px 10px 15px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+    border: 1px solid var(--stroke-stroke-2, #E2E2E2);
+}
+
+.option-name {
+    color: var(--font-font2, #999);
+    /* B2 */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -1px;
+}
+
+.quantity {
+    display: flex;
+    padding: 4px;
+    align-items: flex-start;
+    border-radius: 4px;
+    border: 1px solid var(--stroke-stroke-2, #E2E2E2);
+}
+
+.minus,
+.plus {
+    width: 20px;
+    color: var(--font-font-1, #333);
+    text-align: center;
+
+    /* B2-bold */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -1px;
+}
+
+.option-num {
+    width: 32px;
+    color: var(--font-font-1, #333);
+    text-align: center;
+
+    /* B2-bold */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -1px;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.login-btn {
+    display: flex;
+    padding: 16px 0px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--point-main, #5E0080);
+    color: #FFF;
+    text-align: center;
+    /* Btn */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
+
+.price-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+
+.price-title {
+    color: #000;
+    /* B2 */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -1px;
+}
+
+.total-price {
+    color: var(--font-font-1, #333);
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 114.286% */
+    letter-spacing: -1px;
+}

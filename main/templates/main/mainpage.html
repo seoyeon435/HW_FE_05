@@ -43,7 +43,7 @@
 
       <section class="product-section">
       <div class="sort-bar">
-          <span class="total-count">총 {{ products|length }}건</span>
+          <span class="total-count">총<span id="total-count-value">0</span>건</span>
           <div class="sort-options">
             <a href="#" class="active">추천순</a>
             <span class="divider-icon"></span>
@@ -58,6 +58,8 @@
             <a href="#">높은 가격순</a>
           </div>
       </div>
+
+      <div class="selected"></div>
 
       
       <div class="product-grid">
