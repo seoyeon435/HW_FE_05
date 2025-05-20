@@ -10,7 +10,7 @@
   <div class="wrapper">
     <!-- 왼쪽: 이미지 영역 -->
     <div class="product-image">
-      <img src="{% static 'assets/fruit.png' %}" alt="{{ product.name }}">
+      <img class="image" src="{% static 'assets/fruit.png' %}" alt="{{ product.name }}">
     </div>
 
     <!-- 오른쪽: 상품 정보 영역 -->
@@ -23,10 +23,15 @@
               <p class="discount-price">{{product.discount_price}}원</p>
           </div>
 
+          <div class="divider-line"></div>
+
           <div class="notice-box">
             <p class="notice-title">안내 사항</p>
             <p class="notice-desc">{{product.notice}}</p>
           </div>
+
+          <div class="divider-line"></div>
+
 
           <div class="option">
             <p class="option-title">상품 선택</p>
@@ -39,6 +44,8 @@
                 </div>
             </div>
           </div>
+          <div class="divider-line"></div>
+
 
       </div>
 

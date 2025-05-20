@@ -22,7 +22,16 @@
 .product-image {
     width: 430px;
     height: 550px;
+    
 }
+
+.image {
+    width: 430px;
+    height: 550px;
+    border-radius: 8px;
+    background: #D9D9D9;
+}
+
 
 
 .product {
@@ -237,4 +246,10 @@
     font-weight: 600;
     line-height: 32px; /* 114.286% */
     letter-spacing: -1px;
+}
+
+.divider-line {
+    width: 570px;
+    height: 1px;
+    background: #E2E2E2;
 }
