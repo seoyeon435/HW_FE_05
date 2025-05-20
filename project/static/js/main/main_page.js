@@ -1,6 +1,5 @@
 const categoryLinks = document.querySelectorAll('.category-bar a');
 
-
 categoryLinks.forEach(link => {
     link.addEventListener('mouseenter', () => {
         link.classList.add('hovered');
@@ -10,7 +9,6 @@ categoryLinks.forEach(link => {
         link.classList.remove('hovered');
     });
 });
-
 
 
 /* 6주차 과제 */
@@ -39,6 +37,11 @@ const selectedCategories = document.querySelector('.selected');
 const checkboxes = document.querySelectorAll('.category-detail input[type="checkbox"]');
 
 
+const resetButton = document.querySelector('.reset');
+const resetIcon = resetButton.querySelector('img'); // <img>로 되어 있어야 합니다
+const defaultIconPath = "/static/assets/reset.svg";
+const activeIconPath = "/static/assets/icons/reset_active.svg";
+
 checkboxes.forEach(checkbox => {
     // 사용자가 체크하거나 체크 해제할 때마다 동작하도록 'change' 사용함
     checkbox.addEventListener('change', () => {
@@ -66,46 +69,53 @@ checkboxes.forEach(checkbox => {
             // X 버튼을 누르면 해당 카테고리 태그를 html 에서 삭제
             tag.remove();
 
-
             // 체크된 항목이 없으면 숨기기
             const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
             selectedCategories.style.display = anyChecked ? 'flex' : 'none';
+
+            
+            resetIcon.setAttribute('src', anyChecked ? activeIconPath : defaultIconPath);
+
+            updateTotalCount();
         });
-    
 
         selectedCategories.appendChild(tag);
         } else if (!checkbox.checked && existingTag) {
             // 체크박스 해제했을 때 existingTag가 있다면 해당 태그 삭제
         existingTag.remove();
         }
-        
+
         // 체크된 항목이 없으면 숨기기
         const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
         selectedCategories.style.display = anyChecked ? 'flex' : 'none';
 
         updateTotalCount();
+
+        if (anyChecked) {
+            resetButton.classList.add('active');
+            resetIcon.setAttribute('src', activeIconPath); // 
+        } else {
+            resetButton.classList.remove('active');
+            resetIcon.setAttribute('src', defaultIconPath); // 
+        }
     });   
 });
 
 
-
-
 // 초기화 버튼
-const resetButton = document.querySelector('.reset');
-
 resetButton.addEventListener('click', () => {
     checkboxes.forEach(cb => {
         // 초기화 버튼 누르면 모튼 체크박스 해제시킴
         cb.checked = false;
     });
 
-    // 
     selectedCategories.innerHTML = '';
-
-    // .selected 영역 숨기기
     selectedCategories.style.display = 'none';
+
+    resetButton.classList.remove('active');
+
+
+    resetIcon.setAttribute('src', defaultIconPath);
 
     updateTotalCount();
 });
-
-

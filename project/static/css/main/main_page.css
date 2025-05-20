@@ -81,6 +81,19 @@
         line-height: 20px; /* 133.333% */
     }
 
+    .reset.active {
+        color: var(--font-font2, #999);
+
+        /* H3 */
+        font-family: Pretendard;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 133.333% */
+    }
+
+
+
     .category-filter {
         display: flex;
         height: 52px;

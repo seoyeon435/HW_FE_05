@@ -3,7 +3,7 @@ from django.urls import path
 from django.contrib import admin
 from main import views
 
-app_name = 'main'
+# app_name = 'main'
 urlpatterns = [
     path('', views.mainpage, name='mainpage'),
     path('product/<int:product_id>/', views.product_detail, name="product_detail"),
