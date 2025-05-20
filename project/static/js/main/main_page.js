@@ -76,6 +76,14 @@ checkboxes.forEach(checkbox => {
             
             resetIcon.setAttribute('src', anyChecked ? activeIconPath : defaultIconPath);
 
+            if (anyChecked) {
+                resetButton.classList.add('active');
+                resetIcon.setAttribute('src', activeIconPath);
+            } else {
+                resetButton.classList.remove('active'); // ✅ 이거 추가!
+                resetIcon.setAttribute('src', defaultIconPath);
+            }
+
             updateTotalCount();
         });
 
