@@ -64,7 +64,7 @@
       
       <div class="product-grid">
         {% for product in products %}
-        <a href="{% url 'product_detail' product.id %}" class="product-card-link">
+        <a href="{% url 'main:product_detail' product.id %}" class="product-card-link">
           <div class="product-card">
             <div class="product-img-box">
               <img src="{% static 'assets/fruit.png' %}" alt="{{ product.name }}">
@@ -99,4 +99,9 @@
 
 
 <script src="{% static 'js/main/main_page.js' %}"></script>
+
+
+
+
+
 {% endblock %}

@@ -1,1 +1,212 @@
 /* signup page - CSS */
+.container {
+    display: flex;
+    padding-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.title {
+    color: #000;
+    text-align: right;
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 114.286% */
+    letter-spacing: -1px;
+}
+
+.line1 {
+    width: 640px;
+    height: 1px;
+    background: #000;
+}
+
+.line2 {
+    width: 640px;
+    height: 1px;
+    background: #E2E2E2;
+}
+
+.bottom {
+    display: flex;
+    width: 240px;
+    padding: 16px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--stroke-stroke-2, #E2E2E2);
+}
+
+.bottom button {
+    color: var(--font-font2, #999);
+    text-align: center;
+
+    /* Btn */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
+
+
+.box2 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.id-box {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
+    max-width: 640px;       
+    height: auto;  
+    box-sizing: border-box;     
+}
+
+.box2 form {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+
+
+.id-box label,
+.password-box label,
+.password-check-box label{
+    display: flex;
+    width: 150px;
+    height: 46px;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    /* B2-bold */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -1px;
+}
+
+.id-box input {
+    display: flex;
+    flex: 1;
+    height: 46px;
+    padding: 0px 1px 0px 11px;
+
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid var(--stroke-stroke-1, #CCC);
+}
+
+.id-box input::placeholder,
+.password-box input::placeholder,
+.password-check-left input::placeholder {
+    color: var(--font-font2, #999);
+    /* B2 */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -1px;
+    }
+
+.password-box {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.password-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.password-left input {
+    display: flex;
+    height: 46px;
+    padding: 0px 1px 0px 11px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid var(--stroke-stroke-1, #CCC);
+}
+
+.password-left ul {
+    list-style-type: disc;       
+    padding-left: 20px;          
+    color: #999;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+}
+
+.password-left li {
+  margin-bottom: 4px;          /* 각 항목 간 간격 */
+}
+
+
+.password-check-box {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+
+.password-check-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.password-check-left input {
+    display: flex;
+    height: 46px;
+    padding: 0px 1px 0px 11px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid var(--stroke-stroke-1, #CCC);
+}
