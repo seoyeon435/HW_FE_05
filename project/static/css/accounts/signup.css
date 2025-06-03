@@ -1,5 +1,5 @@
 /* signup page - CSS */
-.container {
+#signup-form {
     display: flex;
     padding-top: 50px;
     flex-direction: column;
@@ -84,12 +84,12 @@
     box-sizing: border-box;     
 }
 
-.box2 form {
+/* .box2 form {
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
     box-sizing: border-box;
-}
+} */
 
 
 

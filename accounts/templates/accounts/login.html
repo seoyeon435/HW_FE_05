@@ -5,7 +5,8 @@
 <link rel="stylesheet" href="{% static 'css/accounts/login.css' %}" />
 
 <div class="container">
-  <form action="" id="login-form">
+  <form action="{% url 'accounts:login' %}" method="POST" id="login-form">
+    {% csrf_token %}
     <div class="top">
       <div class="box1">
         <h2 class="login">로그인</h2>
@@ -13,7 +14,7 @@
 
       <div class="box2">
         <div class="id-box">
-          <input type="text" id="id" name="id" placeholder="아이디를 입력해주세요" required />
+          <input type="text" id="id" name="username" placeholder="아이디를 입력해주세요" required />
         </div>
 
         <div class="password-box">

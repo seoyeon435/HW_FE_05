@@ -48,7 +48,7 @@ function checkForm() {
         pw === pwCheck &&
         checkPassword(pw);
 
-    // signupBtn.disabled = !isValid;
+    signupBtn.disabled = !isValid;
     // signupBtn.style.backgroundColor = isValid ? "#000" : "#5E0080";
     // signupBtn.style.color = isValid ? "#fff" : "#999";
     

@@ -8,20 +8,21 @@
 
 <div class="container">
   
-  <div class="top">
+  <form action="{% url 'accounts:signup' %}" method="POST" id="signup-form">
+    {% csrf_token %}
 
-    <div class="box1">
-      <h2 class="title">회원가입</h2>
-    </div>
+    <div class="top">
 
-    <div class="line1"></div>
+      <div class="box1">
+        <h2 class="title">회원가입</h2>
+      </div>
 
-    <div class="box2">
+      <div class="line1"></div>
 
-      <form action = "" id="signup-form">
+      <div class="box2">
         <div class="id-box">
           <label for="id">아이디</label>
-          <input type="text" id="id" name="id" placeholder="아이디를 입력해주세요" required>
+          <input type="text" id="id" name="username" placeholder="아이디를 입력해주세요" required>
         </div>
 
         <div class="password-box">
@@ -39,27 +40,25 @@
         <div class="password-check-box">
           <label for="password-check" >비밀번호 확인</label>
           <div class="password-check-left">
-            <input type="password" id="password-check" name="password-check" placeholder="비밀번호를 한번 더 입력해주세요" required>
+            <input type="password" id="password-check" name="password2" placeholder="비밀번호를 한번 더 입력해주세요" required>
             <p id="pw-mismatch-msg" style="display: none; color: #FA622F; font-size: 14px;">비밀번호가 일치하지 않습니다!</p>
           </div>
 
         </div>
+      </div>
+      <div class="line2"></div>
 
-      </form>
     </div>
 
-    <div class="line2"></div>
-
-  </div>
 
 
+    <div class="bottom">
+      <button type="submit" class="signup-btn" id="signup-btn" disabled>가입하기</button>
+    </div>
 
-  <div class="bottom">
-    <button type="submit" class="signup-btn" id="signup-btn" disabled>가입하기</button>
-  </div>
 
+  </form>
 
-  
 
 </div>
 
